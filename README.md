@@ -1,8 +1,11 @@
-# animacoesimplicita
+# Animacoes Implícitas
 
 A new Flutter application.
 
 ## Getting Started
+
+No diretório *lib* estão todos os widgtes, sendo que cada um deles é um tipo diferente de animação.
+Para habilita-los basta ir em *main.dart* e descomentar o *import* e a chamada do widgte.
 
 This project is a starting point for a Flutter application.
 
