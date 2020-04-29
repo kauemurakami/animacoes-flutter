@@ -8,10 +8,13 @@ class TweenAnim3 extends StatefulWidget {
 
 class _TweenAnim3State extends State<TweenAnim3> {
 
+  static final colorTween = ColorTween(begin: Colors.white, end: Colors.pink);
+
   @override
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
-        tween: ColorTween(begin: Colors.white, end: Colors.pink),
+        tween: colorTween,
+        child: Image.asset("imgs/estrelas.jpg"),
         duration: Duration(seconds: 2),
         builder: (BuildContext context, Color cor, Widget widget){
           return ColorFiltered(
@@ -19,7 +22,7 @@ class _TweenAnim3State extends State<TweenAnim3> {
                 cor,
             BlendMode.overlay,
             ),
-            child: Image.asset("imgs/estrelas.jpg"),
+            child: widget,
           );
         }
     );
